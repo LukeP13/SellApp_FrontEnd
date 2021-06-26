@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/profileSellerConstraint"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="@drawable/background_gadient_blue_black"
+        tools:context=".fragment.ProfileFragment">
+
+        <TextView
+            android:id="@+id/phoneTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/montserrat"
+            android:text="@string/phone_txt"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/avatarImage"
+            app:layout_constraintTop_toBottomOf="@+id/emailTxt"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/dateTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/montserrat"
+            android:text="@string/birthday_txt"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/avatarImage"
+            app:layout_constraintTop_toBottomOf="@+id/phoneTxt"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/emailTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/montserrat"
+            android:text="@string/e_mail_txt"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/avatarImage"
+            app:layout_constraintTop_toBottomOf="@+id/nameTxt"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/nameTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/montserrat"
+            android:text="@string/name"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/avatarImage"
+            app:layout_constraintTop_toBottomOf="@+id/avatarImage"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/birthdayView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/dateTxt"
+            app:layout_constraintStart_toStartOf="@+id/phoneView"
+            app:layout_constraintTop_toTopOf="@+id/dateTxt" />
+
+        <TextView
+            android:id="@+id/phoneView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/phoneTxt"
+            app:layout_constraintStart_toStartOf="@+id/emailView"
+            app:layout_constraintTop_toTopOf="@+id/phoneTxt" />
+
+        <TextView
+            android:id="@+id/emailView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/emailTxt"
+            app:layout_constraintStart_toStartOf="@+id/nameView"
+            app:layout_constraintTop_toTopOf="@+id/emailTxt" />
+
+        <TextView
+            android:id="@+id/nameView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/nameTxt"
+            app:layout_constraintStart_toStartOf="@+id/usernameView"
+            app:layout_constraintTop_toTopOf="@+id/nameTxt" />
+
+
+    <Button
+        android:id="@+id/updateImageBtt"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/invisible"
+        android:textColor="@android:color/holo_blue_light"
+        android:textSize="10sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/avatarImage"
+        app:layout_constraintEnd_toEndOf="@+id/avatarImage"
+        app:layout_constraintStart_toStartOf="@+id/avatarImage"
+        app:layout_constraintTop_toTopOf="@+id/avatarImage" />
+
+    <ImageView
+        android:id="@+id/backAvatar"
+        android:layout_width="93dp"
+        android:layout_height="93dp"
+        android:background="@drawable/avatar_backg"
+        app:layout_constraintBottom_toBottomOf="@+id/avatarImage"
+        app:layout_constraintEnd_toEndOf="@+id/avatarImage"
+        app:layout_constraintStart_toStartOf="@id/avatarImage"
+        app:layout_constraintTop_toTopOf="@+id/avatarImage"/>
+
+    <ImageView
+        android:id="@+id/avatarImage"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="30dp"
+        android:contentDescription="@string/show_the_user_image"
+        android:scaleType="centerCrop"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/profileicon" />
+
+    <ImageView
+        android:id="@+id/editAvatar"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@android:color/darker_gray"
+        android:backgroundTint="#000000"
+        android:backgroundTintMode="add"
+        android:foreground="@android:drawable/ic_menu_edit"
+        app:layout_constraintBottom_toBottomOf="@+id/avatarImage"
+        app:layout_constraintEnd_toEndOf="@id/avatarImage" />
+
+        <TextView
+            android:id="@+id/usernameView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:fontFamily="@font/montserrat"
+            android:textColor="@android:color/white"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="@+id/avatarImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.05"
+            app:layout_constraintStart_toEndOf="@+id/avatarImage"
+            app:layout_constraintTop_toTopOf="@+id/avatarImage" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/editButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:src="@android:drawable/ic_menu_edit"
+        app:backgroundTint="#3F4FBA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/background_round_white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateTxt"
+        app:layout_constraintVertical_bias="1.0">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#1775BF"
+            app:tabIndicatorColor="#00D2ED"
+            app:tabSelectedTextColor="#FFFFFF"
+            app:tabTextAppearance="@style/TextAppearance.AppCompat.Body2"
+            app:tabTextColor="#7EFFFFFF" />
+
+    </androidx.viewpager.widget.ViewPager>
+
+    <Button
+        android:id="@+id/logoutBttn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/invisible"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/logout"
+        android:textColor="@android:color/holo_blue_light"
+        android:textSize="10sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/expandButton"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/arrow_down"
+        android:backgroundTint="#92000000"
+        android:padding="0dp"
+        android:rotation="180"
+        app:layout_constraintBottom_toTopOf="@+id/view_pager"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

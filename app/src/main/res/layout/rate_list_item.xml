@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:padding="10dp"
+    android:layout_marginVertical="2dp"
+    android:background="@drawable/background_round_white">
+
+    <ImageView
+        android:id="@+id/avatarImage"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/no_image" />
+
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        app:layout_constraintStart_toEndOf="@id/avatarImage"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginHorizontal="10dp"/>
+
+    <TextView
+        android:id="@+id/rateDescription"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="5dp"
+        android:text="Rate description"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/rateBar"
+        app:layout_constraintStart_toEndOf="@+id/avatarImage"
+        app:layout_constraintTop_toBottomOf="@+id/userName" />
+
+
+    <TextView
+        android:id="@+id/rateDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="01/01/2020"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <RatingBar
+        android:id="@+id/rateBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:isIndicator="true"
+        android:numStars="5"
+        android:scrollbarSize="4dp"
+        android:stepSize="0.5"
+        android:theme="@style/RatingBar"
+        style="?android:attr/ratingBarStyleSmall"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

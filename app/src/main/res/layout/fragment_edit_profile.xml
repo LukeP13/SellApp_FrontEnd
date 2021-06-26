@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.EditProfile"
+    android:background="@color/cardview_dark_background">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <Button
+        android:id="@+id/bttDelAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/invisible"
+        android:text="Delete account"
+        android:textAllCaps="false"
+        android:textColor="#ACA7A7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/auxSpinner" />
+
+    <Button
+        android:id="@+id/cancelBttn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="12dp"
+        android:background="@android:drawable/ic_menu_close_clear_cancel"
+        android:backgroundTint="@android:color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/acceptBttn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/check"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textEditProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/profile_information"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/usernameEdit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="20dp"
+        android:textColor="@color/white"
+        android:paddingTop="0dp"
+        android:textSize="16sp"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textEditProfile" />
+
+    <TextView
+        android:id="@+id/usernameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:text="@string/username"
+        android:textColor="#9F9E9E"
+        app:layout_constraintBottom_toTopOf="@+id/usernameEdit"
+        app:layout_constraintStart_toStartOf="@+id/usernameEdit" />
+
+
+    <EditText
+        android:id="@+id/nameEdit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="20dp"
+        android:textColor="@color/white"
+        android:paddingTop="0dp"
+        android:textSize="16sp"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/usernameEdit" />
+
+    <TextView
+        android:id="@+id/nameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/name"
+        android:textColor="#9F9E9E"
+        android:layout_marginStart="3dp"
+        app:layout_constraintBottom_toTopOf="@+id/nameEdit"
+        app:layout_constraintStart_toStartOf="@+id/nameEdit" />
+
+    <EditText
+        android:id="@+id/emailEdit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="20dp"
+        android:textColor="@color/white"
+        android:paddingTop="0dp"
+        android:textSize="16sp"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameEdit" />
+
+    <TextView
+        android:id="@+id/emailLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/email"
+        android:textColor="#9F9E9E"
+        android:layout_marginStart="3dp"
+        app:layout_constraintBottom_toTopOf="@+id/emailEdit"
+        app:layout_constraintStart_toStartOf="@+id/emailEdit" />
+
+    <EditText
+        android:id="@+id/telEdit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="20dp"
+        android:paddingTop="0dp"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:inputType="phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailEdit" />
+
+    <TextView
+        android:id="@+id/telLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/phone_number"
+        android:textColor="#9F9E9E"
+        android:layout_marginStart="3dp"
+        app:layout_constraintBottom_toTopOf="@+id/telEdit"
+        app:layout_constraintStart_toStartOf="@+id/telEdit" />
+
+    <EditText
+        android:id="@+id/birthEdit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="20dp"
+        android:paddingTop="0dp"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:inputType="date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/telEdit" />
+
+    <TextView
+        android:id="@+id/birthLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/birthday"
+        android:textColor="#9F9E9E"
+        android:layout_marginStart="3dp"
+        app:layout_constraintBottom_toTopOf="@+id/birthEdit"
+        app:layout_constraintStart_toStartOf="@+id/birthEdit" />
+
+    <EditText
+        android:id="@+id/auxSpinner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="20dp"
+        android:textColor="@color/white"
+        android:paddingTop="0dp"
+        android:clickable="false"
+        android:focusable="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/birthEdit" />
+
+    <Spinner
+        android:id="@+id/locationEdit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="20dp"
+        android:paddingLeft="0dp"
+        android:paddingTop="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/birthEdit" />
+
+
+
+    <TextView
+        android:id="@+id/locLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:text="@string/location"
+        android:textColor="#9F9E9E"
+        app:layout_constraintBottom_toTopOf="@+id/locationEdit"
+        app:layout_constraintStart_toStartOf="@+id/locationEdit" />
+
+    <Button
+        android:id="@+id/bttChangePwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="50dp"
+        android:background="@color/invisible"
+        android:text="Change my password"
+        android:textAllCaps="false"
+        android:textColor="#ACA7A7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/auxSpinner" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/productListFragment">
+
+    <fragment
+        android:id="@+id/productListFragment"
+        android:name="org.udg.pds.todoandroid.fragment.ProductListFragment"
+        android:label="ProductListFragment"
+        tools:layout="@layout/fragment_product_list">
+        <action
+            android:id="@+id/action_productListFragment_to_fragmentProduct"
+            app:destination="@id/fragmentProduct"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:popEnterAnim="@anim/fragment_close_enter"
+            app:exitAnim="@anim/fragment_open_exit"
+            app:popExitAnim="@anim/fragment_close_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="org.udg.pds.todoandroid.fragment.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_searchFragment_to_fragmentProduct"
+            app:destination="@id/fragmentProduct"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_close_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/addProductFragment"
+        android:name="org.udg.pds.todoandroid.fragment.AddProductFragment"
+        android:label="AddProductFragment"
+        tools:layout="@layout/fragment_add_product">
+        <action
+            android:id="@+id/action_addProductFragment_to_productListFragment"
+            app:destination="@id/productListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/wishListFragment"
+        android:name="org.udg.pds.todoandroid.fragment.WishListFragment"
+        android:label="fragment_wish_list"
+        tools:layout="@layout/fragment_wish_list" >
+         <action
+            android:id="@+id/action_wishListFragment_to_fragmentProduct"
+            app:destination="@id/fragmentProduct"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_close_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="org.udg.pds.todoandroid.fragment.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_fragmentProduct"
+            app:destination="@id/fragmentProduct"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_open_exit"
+            app:popEnterAnim="@anim/fragment_close_enter"
+            app:popExitAnim="@anim/fragment_close_exit" />
+        <action
+            android:id="@+id/action_profileFragment_to_fragment_edit_profile"
+            app:destination="@id/editProfileFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_profileFragment_to_addRate"
+            app:destination="@id/addRate" />
+    </fragment>
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="org.udg.pds.todoandroid.fragment.EditProfile"
+        android:label="fragment_edit_profile"
+        tools:layout="@layout/fragment_edit_profile">
+        <action
+            android:id="@+id/action_editProfile_to_profileFragment"
+            app:destination="@id/profileFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/productListFragment" />
+        <action
+            android:id="@+id/action_editProfileFragment_to_editPassword"
+            app:destination="@id/editPassword"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentProduct"
+        android:name="org.udg.pds.todoandroid.fragment.FragmentProduct"
+        android:label="fragment_product"
+        tools:layout="@layout/fragment_product">
+        <action
+            android:id="@+id/action_fragmentProduct_to_editProductFragment"
+            app:destination="@id/editProductFragment" />
+        <action
+            android:id="@+id/action_fragmentProduct_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_fragmentProduct_to_profileFragmentSeller"
+            app:destination="@id/profileFragmentSeller" />
+    </fragment>
+    <fragment
+        android:id="@+id/editPassword"
+        android:name="org.udg.pds.todoandroid.fragment.EditPassword"
+        android:label="fragment_edit_password"
+        tools:layout="@layout/fragment_edit_password" >
+        <action
+            android:id="@+id/action_editPassword_to_editProfileFragment"
+            app:destination="@id/editProfileFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/profileFragment" />
+        <action
+            android:id="@+id/action_editPassword_to_profileFragment"
+            app:destination="@id/profileFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:popUpTo="@id/productListFragment"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/editProductFragment"
+        android:name="org.udg.pds.todoandroid.fragment.EditProductFragment"
+        android:label="fragment_edit_product"
+        tools:layout="@layout/fragment_edit_product" >
+        <action
+            android:id="@+id/action_editProductFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addRate"
+        android:name="org.udg.pds.todoandroid.fragment.AddRate"
+        android:label="f_add_rate"
+        tools:layout="@layout/f_add_rate" >
+        <action
+            android:id="@+id/action_addRate_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_addRate_to_productListFragment"
+            app:destination="@id/productListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragmentSeller"
+        android:name="org.udg.pds.todoandroid.fragment.ProfileFragmentSeller"
+        android:label="fragment_profile_seller"
+        tools:layout="@layout/fragment_profile_seller" >
+        <action
+            android:id="@+id/action_profileFragmentSeller_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_profileFragmentSeller_to_addRate"
+            app:destination="@id/addRate" />
+    </fragment>
+</navigation>

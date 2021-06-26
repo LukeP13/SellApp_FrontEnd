@@ -1,0 +1,54 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#3F51B5</item>
+        <!-- Light Indigo -->
+        <item name="colorPrimaryDark">#3949AB</item>
+        <!-- Dark Indigo -->
+        <item name="colorAccent">#00B0FF</item>
+        <!-- Blue -->
+    </style>
+
+    <style name="AppTheme" parent="AppTheme.Base"></style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="FullscreenTheme" parent="AppTheme">
+        <item name="android:actionBarStyle">@style/FullscreenActionBarStyle</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="metaButtonBarStyle">?android:attr/buttonBarStyle</item>
+        <item name="metaButtonBarButtonStyle">?android:attr/buttonBarButtonStyle</item>
+    </style>
+
+    <style name="FullscreenActionBarStyle" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/black_overlay</item>
+    </style>
+
+    <style name="fontUs">
+        <item name="fontFamily">@font/montserrat</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="footerButton">
+        <item name="android:layout_width">330dp</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:textSize">25dp</item>
+        <item name="fontFamily">@font/montserrat</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="background">@android:drawable/editbox_background</item>
+        <item name="backgroundTint">#62B3F3</item>
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlActivated">@color/duskYellow</item>
+        <item name="colorControlNormal">@color/lightGrey</item>
+    </style>
+
+    <color name="duskYellow">#ECBD25</color>
+    <color name="lightGrey">#817876</color>
+</resources>

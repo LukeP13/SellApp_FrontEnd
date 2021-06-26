@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gadient_blue_black"
+    tools:context=".fragment.EditProductFragment">
+
+    <EditText
+        android:id="@+id/inputProductName"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:fontFamily="@font/montserrat"
+        android:inputType="textPersonName"
+        android:textColorHint="#BAFFFFFF"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintStart_toEndOf="@+id/textProductDescription"
+        app:layout_constraintTop_toTopOf="@+id/guideline" />
+
+    <EditText
+        android:id="@+id/inputProductDescription"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:fontFamily="@font/montserrat"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:textColorHint="#BAFFFFFF"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/inputProductName"
+        app:layout_constraintStart_toStartOf="@+id/inputProductName"
+        app:layout_constraintTop_toBottomOf="@+id/inputProductName" />
+
+    <EditText
+        android:id="@+id/inputProductPrice"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:fontFamily="@font/montserrat"
+        android:inputType="numberDecimal"
+        android:textColor="#BAFFFFFF"
+        android:textColorHint="#BAFFFFFF"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/inputProductDescription"
+        app:layout_constraintStart_toStartOf="@+id/inputProductDescription"
+        app:layout_constraintTop_toBottomOf="@+id/inputProductDescription" />
+
+    <TextView
+        android:id="@+id/textEditProductTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:shadowColor="#000000"
+        android:shadowDx="-2"
+        android:shadowDy="-2"
+        android:shadowRadius="1"
+        android:text="@string/editProduct"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:fontFamily="@font/montserrat" />
+
+    <TextView
+        android:id="@+id/textProductName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/TextProductName"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/inputProductName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/inputProductName" />
+
+    <TextView
+        android:id="@+id/textProductDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/TextProductDescription"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/inputProductDescription"
+        app:layout_constraintStart_toStartOf="@+id/textProductName"
+        app:layout_constraintTop_toBottomOf="@+id/inputProductName" />
+
+    <TextView
+        android:id="@+id/textProductPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/textProductPrice"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/inputProductPrice"
+        app:layout_constraintStart_toStartOf="@+id/textProductName"
+        app:layout_constraintTop_toTopOf="@+id/inputProductPrice" />
+
+    <TextView
+        android:id="@+id/textProductLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/textProductLocation"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/textProductPrice"
+        app:layout_constraintTop_toBottomOf="@+id/inputProductPrice" />
+
+    <Spinner
+        android:id="@+id/inputLocation"
+        android:layout_width="250dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textProductLocation"
+        app:layout_constraintEnd_toEndOf="@+id/inputProductPrice"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/inputProductPrice"
+        app:layout_constraintTop_toBottomOf="@+id/inputProductPrice"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="90dp" />
+
+    <Button
+        android:id="@+id/editProductButton"
+        style="@style/footerButton"
+        android:text="@string/editProductButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.843" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

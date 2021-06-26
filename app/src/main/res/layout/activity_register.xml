@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gadient_blue_black"
+    tools:context=".activity.Register">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.Register">
+
+        <Spinner
+            android:id="@+id/locationInput"
+            style="@style/Widget.MaterialComponents.TextInputEditText.OutlinedBox.Dense"
+            android:layout_width="330dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:autofillHints=""
+            android:background="@android:drawable/editbox_background"
+            android:backgroundTint="#FFFFFF"
+            android:ems="10"
+            android:fontFamily="@font/montserrat"
+            android:hint="@string/location"
+            android:inputType="textPersonName"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/confPasswInput" />
+
+        <EditText
+            android:id="@+id/nameInput"
+            style="@style/Widget.MaterialComponents.TextInputEditText.OutlinedBox.Dense"
+            android:layout_width="330dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:autofillHints=""
+            android:background="@android:drawable/editbox_background"
+            android:backgroundTint="#FFFFFF"
+            android:ems="10"
+            android:fontFamily="@font/montserrat"
+            android:hint="@string/name"
+            android:inputType="textPersonName"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/usernameInput" />
+
+        <TextView
+            android:id="@+id/TextRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/montserrat"
+            android:text="@string/register"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/usernameInput"
+            style="@style/Widget.MaterialComponents.TextInputEditText.OutlinedBox.Dense"
+            android:layout_width="330dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="25dp"
+            android:autofillHints=""
+            android:background="@android:drawable/editbox_background"
+            android:backgroundTint="#FFFFFF"
+            android:ems="10"
+            android:fontFamily="@font/montserrat"
+            android:hint="@string/username"
+            android:inputType="textPersonName"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/TextRegister" />
+
+        <EditText
+            android:id="@+id/passwInput"
+            android:layout_width="330dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:autofillHints=""
+            android:background="@android:drawable/editbox_background"
+            android:ems="10"
+            android:fontFamily="@font/montserrat"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/emailInput" />
+
+        <EditText
+            android:id="@+id/confPasswInput"
+            android:layout_width="330dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:autofillHints=""
+            android:background="@android:drawable/editbox_background"
+            android:ems="10"
+            android:fontFamily="@font/montserrat"
+            android:hint="@string/confirm_password"
+            android:inputType="textPassword"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/passwInput" />
+
+        <EditText
+            android:id="@+id/emailInput"
+            android:layout_width="330dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:autofillHints=""
+            android:background="@android:drawable/editbox_background"
+            android:ems="10"
+            android:fontFamily="@font/montserrat"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nameInput" />
+
+        <EditText
+            android:id="@+id/telInput"
+            android:layout_width="330dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:autofillHints=""
+            android:background="@android:drawable/editbox_background"
+            android:ems="10"
+            android:fontFamily="@font/montserrat"
+            android:hint="@string/phone_number"
+            android:inputType="phone"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/locationInput" />
+
+        <EditText
+            android:id="@+id/birthdayInput"
+            android:layout_width="330dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:autofillHints=""
+            android:background="@android:drawable/editbox_background"
+            android:ems="10"
+            android:fontFamily="@font/montserrat"
+            android:hint="@string/birthday"
+            android:inputType="date"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/telInput" />
+
+        <CheckBox
+            android:id="@+id/checkPolicy"
+            android:layout_width="310dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:backgroundTint="#FFFFFF"
+            android:buttonTint="@android:color/white"
+            android:checked="false"
+            android:fontFamily="@font/montserrat"
+            android:text="@string/by_signing_up_i_agree_to_the_terms_of_service_and_privacy_policy"
+            android:textColor="@android:color/white"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/birthdayInput" />
+
+        <Button
+            android:id="@+id/signUpButton"
+            android:text="@string/sign_up"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkPolicy"
+            style="@style/footerButton"/>
+
+        <Button
+            android:id="@+id/returnButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@android:drawable/ic_media_play"
+            android:backgroundTint="@android:color/white"
+            android:rotation="180"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
